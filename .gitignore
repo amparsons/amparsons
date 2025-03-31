@@ -5,22 +5,22 @@
 node_modules/
 
 # Ignore sensitive files
-.env
-.env.local
+/backend/.env
+/backend/.env.local
 
 # Ignore vendor directory (if using Composer)
-vendor/
+backend/vendor/
 
 # Ignore cache and temporary files
-storage/
-public/resources/
-web/assets/
+/backend/storage/
+backend/public/resources/
+backend/web/assets/
 
 # Ignore Craft-specific files and folders
-craft/storage/
-craft/config/db.php
-craft/config/general.php
-craft/config/project.yaml
+/backend/craft/storage/
+backend/craft/config/db.php
+/backend/craft/config/general.php
+/backend/craft/config/project.yaml
 
 # Ignore IDE and OS-specific files
 .DS_Store
