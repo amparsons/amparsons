@@ -1,0 +1,19 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: Simple
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link
+  - underline
+  - strikethrough
+  - code
+  - insertImage
+  - mediaEmbed

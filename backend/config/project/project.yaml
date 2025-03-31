@@ -1,0 +1,52 @@
+dateModified: 1742762524
+email:
+  fromEmail: annemarie@amparsons.co.uk
+  fromName: 'Freelance Front-end Developer'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: false
+    name: images
+    settings:
+      path: images
+    type: craft\fs\Local
+    url: null
+meta:
+  __names__:
+    1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46: General # General
+    2e3ba3f6-b2fa-4e5f-a4da-e458e943659a: 'Freelance Front-end Developer' # Freelance Front-end Developer
+    4a2585d8-9b99-4f41-85cd-afdc271a8f5c: Headless # Headless
+    8a1a3de2-291e-4bbd-b4f1-565c5f08021a: pageTitle # pageTitle
+    09b45cd8-eab9-448a-8e38-270913baca16: CTA # CTA
+    47b0b20c-3a52-481c-8f33-b2a5a0c3b41e: home # home
+    0153a64f-ddaf-439f-8f3d-f8bb728de6ec: 'Feature Images' # Feature Images
+    4190c3a1-4344-4993-9bc0-18c7c647450e: Editor # Editor
+    5765e8f2-59c3-4d6c-9d78-01092c8f47c8: 'Matric test' # Matric test
+    83726e8b-7ebd-4e41-a5fc-cb64d6475f84: 'Page name' # Page name
+    b3c8a8f4-2b91-4313-907b-0a2c01eb543f: 'Freelance Front-end Developer' # Freelance Front-end Developer
+    c6f2bbff-6ff0-4801-9dcf-338168643bec: pages # pages
+    c232be3d-a138-4712-969a-61cf1915c8a2: 'Public Schema' # Public Schema
+    d29b6322-43da-40b9-a5d2-ea029768fe48: Simple # Simple
+    f0cdc71a-c6b0-46e4-807e-d5f2be29b833: 'Feature image' # Feature image
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  webhooks:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.4.0
+system:
+  edition: solo
+  live: true
+  name: 'Freelance Front-end Developer'
+  schemaVersion: 5.6.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

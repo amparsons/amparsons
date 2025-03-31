@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: editor
+instructions: null
+name: Editor
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: d29b6322-43da-40b9-a5d2-ea029768fe48 # Simple
+  createButtonLabel: 'New editor'
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

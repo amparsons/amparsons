@@ -1,0 +1,35 @@
+columnSuffix: null
+handle: matricTest
+instructions: null
+name: 'Matric test'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 09b45cd8-eab9-448a-8e38-270913baca16 # CTA
+    -
+      __assoc__:
+        -
+          - uid
+          - 8a1a3de2-291e-4bbd-b4f1-565c5f08021a # pageTitle
+    -
+      __assoc__:
+        -
+          - uid
+          - 1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46 # General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

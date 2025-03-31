@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Freelance Front-end Developer'
+primary: true
+siteGroup: 2e3ba3f6-b2fa-4e5f-a4da-e458e943659a # Freelance Front-end Developer
+sortOrder: 1
