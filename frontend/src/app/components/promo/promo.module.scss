@@ -1,0 +1,45 @@
+@use '../../styles/partials/variables' as vars; 
+
+.promo {
+    display: flex;
+    min-height: 300px;
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin-top: calc(vars.$margin * 3);
+    font-family: vars.$title-font;
+    margin-bottom: vars.$margin;
+    background:  var(--black);
+
+    &__title {
+        max-width: 80%;
+        font-size: clamp(1.2rem, 1.5vw, 2rem);
+        line-height: 130%;
+        margin-bottom: vars.$margin;
+    }
+
+    &__logos {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 8 columns */
+        grid-template-rows: repeat(2, auto); 
+        width: 100%;
+        min-height: calc(var(--vh, 1vh)*30);
+        margin: 0;
+        grid-gap: 2px;
+    }
+
+    &__logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        font-size: clamp(1rem, 3vw, 2rem);
+        line-height: 120%;
+        text-align: center;
+        padding: 20px;
+        color: var(--white);
+        background:  var(--offBlack);
+    }
+}

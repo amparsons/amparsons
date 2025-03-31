@@ -1,0 +1,58 @@
+@use '../../styles/partials/variables' as vars; 
+
+.card {
+   $self: &;
+   position: relative;
+   display: flex;
+   align-items: center;
+   margin: 60px 0;
+
+   &__image {
+      width: 60%;
+      margin: 60px 0;
+      color: var(--white);
+   }
+
+   &__content {
+      width: 40%;
+      min-height: 300px;
+      padding: vars.$margin;
+      background: var(--offBlack);
+   }
+
+   &__text {
+      font-size: vars.rem(60px);
+      line-height: 150%;
+   }
+
+   &--flipped {
+      flex-direction: row-reverse;
+   }
+
+   &__title {
+      font-size: clamp(1rem, 10vw, 2rem);
+      margin-bottom:vars.$margin;
+      font-family: vars.$title-font;
+   }
+
+   &__intro {
+      font-size: clamp(.8rem, 10vw, 1.2rem);
+      line-height: 130%;
+      margin-bottom: vars.$margin;
+   }
+
+   &__tags {
+      display: flex;
+      column-gap: 10px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   &__tag {
+      font-size: clamp(.5rem, 8vw, .9rem);
+      background: var(--black);
+      border-radius: 25px;
+      padding: 5px 15px;
+   }
+}

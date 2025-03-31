@@ -8,6 +8,8 @@ node_modules/
 /backend/.env
 /backend/.env.local
 /backend/.env.dev
+/backend/config/license.key.1
+/backend/config/license.key
 
 # Ignore vendor directory (if using Composer)
 backend/vendor/

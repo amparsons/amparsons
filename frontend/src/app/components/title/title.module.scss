@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as vars; 
+
+.title {
+    font-size: clamp(2rem, 3vw, 4.5rem);
+    margin-top: calc(vars.$margin * 3);
+    font-family: vars.$title-font;
+    margin-bottom: vars.$margin;
+
+    &__text {
+        max-width: 80%;
+        font-size: clamp(1.2rem, 1.5vw, 2rem);
+        line-height: 130%;
+        margin-bottom: vars.$margin;
+
+        @include vars.media('tablet') {
+            max-width: 50%;
+        }
+    }
+}

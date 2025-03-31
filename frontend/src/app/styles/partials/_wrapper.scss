@@ -1,0 +1,14 @@
+
+@use '../partials/variables' as vars; 
+
+.wrapper {
+	width: calc(100% - 40px);
+	max-width: vars.$wrapper-width;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0 auto;
+
+	&--narrow {
+		max-width: vars.$wrapper-width-narrow;
+	}
+}

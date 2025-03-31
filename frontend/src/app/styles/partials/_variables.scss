@@ -1,0 +1,46 @@
+@use "sass:math";
+@use "sass:map";
+
+$wrapper-width: 1400px;
+$wrapper-width-narrow: 1024px;
+$title-font: 'Gilroy Heavy';
+$body-font: 'Gilroy Regular';
+$margin: 30px;
+
+@function rem($size) {
+    $base-font-size: 16px;
+    @return math.div($size, $base-font-size) * 1rem;
+}
+
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('../../fonts/gilroy-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Heavy';
+    src: url('../../fonts/gilroy-heavy-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$breakpoints: (
+    'mobile': 400px,
+    'tablet-small': 600px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'large': 1400px
+);
+
+// Mixin for media queries with min-width or max-width
+@mixin media($key, $type: min) {
+    $breakpoint: map.get($breakpoints, $key);
+
+    @if $breakpoint {
+        @media (#{$type}-width: $breakpoint) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use '../partials/variables' as vars; 
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--white);
+	background: var(--black);
+	font-family: vars.$body-font;
+	line-height: 150%;
+}
+
+.responsive-img {
+	width: 100%;
+	height: auto;
+}

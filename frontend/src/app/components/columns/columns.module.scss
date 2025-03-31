@@ -1,0 +1,104 @@
+@use '../../styles/partials/variables' as vars; 
+
+.columns {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 60px;
+    
+    &__left {
+        width: 50%;
+        min-height: 600px;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__right {
+        position: sticky;
+        top: 106px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        min-height: 300px;
+        padding: 40px;
+        background:  var(--offBlack);
+
+        @include vars.media('tablet') {
+            padding: 80px;
+        }
+    }
+
+    &__wrap {
+        margin-left: auto;
+        width: calc(100% - 20px);
+
+        @include vars.media('large') {
+            max-width: calc(vars.$wrapper-width / 2);
+        }
+    }
+
+    &__wrapRight {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    &__title {
+        font-size: clamp(1rem, 10vw, 2rem);
+        margin-bottom:vars.$margin;
+    }
+
+    &__text {
+        font-size: clamp(.8rem, 10vw, 1.3rem);
+        line-height: 130%;
+        margin-bottom: vars.$margin;
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: calc(vars.$margin * 2) 0 0 0;
+    }
+
+    &__item {
+        display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: vars.$margin;
+    }
+
+    &__img {
+        display: inline-block;
+        margin-right: calc(vars.$margin / 2);
+        transition: transform .4s;
+    }
+
+    &__txt {
+        width: 100%;
+        display: block;
+        font-family: vars.$title-font;
+        //transform: translateY(100%);
+        transition: transform .4s;
+    }
+
+    &__link:hover &__img {
+        // transform: translateY(-32px);
+        // transition: transform .4s;
+    }
+
+    &__link:hover &__txt {
+       // transform: translateY(-8px);
+    }
+}
