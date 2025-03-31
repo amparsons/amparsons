@@ -14,6 +14,7 @@
         background-repeat: repeat;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        margin-bottom: calc(vars.$margin / 2);
 
         span {
             display: block;
@@ -25,7 +26,7 @@
     }
 
     &__text {
-        max-width: 80%;
+        max-width: 90%;
         font-size: clamp(1.2rem, 1.5vw, 2rem);
         line-height: 130%;
         margin-bottom: vars.$margin;

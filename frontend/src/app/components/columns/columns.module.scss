@@ -1,36 +1,53 @@
 @use '../../styles/partials/variables' as vars; 
 
 .columns {
-    display: flex;
-    align-items: flex-start;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: vars.$margin;
+
+    @include vars.media('tablet') {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: calc(vars.$margin * 2);
+    }
     
     &__left {
-        width: 50%;
-        min-height: 600px;
+        width: 100%;
+        
+        @include vars.media('tablet') {
+            width: 50%;
+            min-height: 600px;
+        }
     }
 
     &__image {
         max-width: 100%;
-        height: 600px;
-        object-fit: cover;
-        object-position: 50% 50%;
+        height: auto;
+
+        @include vars.media('tablet') {
+            object-position: 50% 50%;
+            height: 600px;
+            object-fit: cover;
+        }
     }
 
     &__right {
-        position: sticky;
-        top: 106px;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 50%;
+        width: 100%;
         min-height: 300px;
         padding: 40px;
         background:  var(--offBlack);
+        z-index: 1;
 
         @include vars.media('tablet') {
+            position: sticky;
+            top: 106px;
+            width: 50%;
             padding: 80px;
+            margin-top: 0;
+            transform: none;
         }
     }
 

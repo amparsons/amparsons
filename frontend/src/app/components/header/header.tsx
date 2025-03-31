@@ -14,7 +14,7 @@ export default async function Header() {
           <ul className={header.header__menu}>
               <li className={header.header__item}><Link className={header.header__link} href="/about">About</Link></li>
               <li className={header.header__item}><Link className={header.header__link} href="/blog">Blog</Link></li>
-              <li className={header.header__item}><Link className={`${header.header__link} ${header.header__linkCta}`} href="mailto:annemarie@amparsons.co.uk?subject=Freelance work" aria-label="Email me to hire me">Hire me!</Link></li>
+              <li className={`${header.header__item} ${header.header__itemLast}`}><Link className={`${header.header__link} ${header.header__linkCta}`} href="mailto:annemarie@amparsons.co.uk?subject=Freelance work" aria-label="Email me to hire me">Hire me!</Link></li>
           </ul>
         </div>
       </header>

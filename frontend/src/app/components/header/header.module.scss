@@ -61,13 +61,45 @@
 	    align-items: center;
         margin-left: auto;
         list-style-type: none;
+
+        @include vars.media('tablet', max) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: var(--black);
+        }
+    }
+
+    &__item {
+
+        @include vars.media('tablet', max) {
+            flex: 1;
+            text-align: center;
+        }
+
+        &Last {
+
+            @include vars.media('tablet', max) {
+                position: fixed;
+                top: 10px;
+                right: 0
+            }
+        }
     }
 
     &__link {
         display: block;
         font-size: vars.rem(20px);
-        padding: 11px 20px;
+        padding: 20px 20px;
         transition: transform .4s;
+        border-top: 1px solid  var(--offBlack);
+
+        @include vars.media('tablet') {
+            padding: 11px 20px;
+        }
 
         &:hover {
             color: var(--pink);

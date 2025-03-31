@@ -2,9 +2,12 @@
 
 .title {
     font-size: clamp(2rem, 3vw, 4.5rem);
-    margin-top: calc(vars.$margin * 3);
     font-family: vars.$title-font;
-    margin-bottom: vars.$margin;
+    margin: vars.$margin 0;
+
+    @include vars.media('tablet') {
+        margin-top: calc(vars.$margin * 3);
+    }
 
     &__text {
         max-width: 80%;
