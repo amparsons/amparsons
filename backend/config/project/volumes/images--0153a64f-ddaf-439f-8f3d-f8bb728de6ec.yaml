@@ -1,6 +1,13 @@
-color: null
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
-  1da7d616-97cf-48af-b093-326b33b75091:
+  db1048d6-8008-4b59-b90b-6452896fdd4e:
+    cardView:
+      - filename
+      - id
+      - height
+      - width
+      - 'layoutElement:837e2558-992c-43f2-9d44-e0ef99170e1a'
     tabs:
       -
         elementCondition: null
@@ -10,7 +17,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-24T12:26:23+00:00'
+            dateAdded: '2025-03-23T15:38:52+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,43 +32,51 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            required: true
+            requirable: false
             size: null
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 0c75e843-91ce-4c82-a629-8e227038fbda
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: bb5f8e32-f71f-454a-8817-5dc93e99fe66
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-24T12:28:26+00:00'
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-04-18T20:44:08+00:00'
+            disabled: false
             elementCondition: null
-            fieldUid: 5fa1fd1f-e8e7-4e9a-aa15-0f3cfc391f41 # Hero image
-            handle: null
-            includeInCards: false
+            id: null
+            includeInCards: true
             instructions: null
             label: null
+            name: null
+            orientation: null
+            placeholder: null
             providesThumbs: false
+            readonly: false
+            requirable: true
             required: false
+            rows: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1852b59a-47c4-43fd-b87e-e56607780c4d
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 837e2558-992c-43f2-9d44-e0ef99170e1a
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 675e09f2-f39f-4537-9845-93749b138d75
+        uid: 2a4c9fdd-f9ff-404c-94d8-527fe6c54e7c
         userCondition: null
-handle: hero
-hasTitleField: true
-icon: null
-name: Hero
-showSlugField: true
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
-titleFormat: null
+fs: images
+handle: images
+name: Images
+sortOrder: 1
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: images
+transformSubpath: ''

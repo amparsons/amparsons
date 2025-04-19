@@ -47,7 +47,7 @@ export default function Card({ isFlipped = false }: CardProps) {
         >
           <h2 className={card.card__title}>Capco</h2>
           <p className={card.card__intro}>
-            During my time at Ratio as a Lead Front-end Developer, I led the implementation of a phased refresh for the website. I also developed a comprehensive style guide, utilising methodologies like BEM (Block, Element, Modifier) naming conventions and the Atomic Design approach. Additionally, I ensured that all new components were fully documented in the style guide, providing clear guidelines for future development.
+            During my time at Ratio as a Lead Front-end Developer, I led the implementation of a phased refresh for the website. I also developed a comprehensive design system, utilising methodologies like BEM (Block, Element, Modifier) naming conventions and the Atomic Design methodologie. Additionally, I ensured that all new components were fully documented, providing clear guidelines for future development.
           </p>
 
           <ul className={card.card__tags}>

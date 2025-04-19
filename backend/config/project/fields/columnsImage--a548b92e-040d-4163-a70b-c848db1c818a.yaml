@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: heroImage
+handle: columnsImage
 instructions: null
-name: 'Hero image'
+name: 'Columns image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,18 +9,19 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Feature Images
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 1
   previewMode: full
   restrictFiles: false
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Feature Images
+  restrictedLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Images
   restrictedLocationSubpath: null
-  selectionLabel: null
+  selectionLabel: 'Add image'
   showCardsInGrid: false
   showSiteMenu: false
   showUnpermittedFiles: false

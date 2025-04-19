@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: featureImage
+handle: heroimage
 instructions: null
-name: 'Feature image'
+name: 'Hero image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,18 +9,19 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Feature Images
-  defaultUploadLocationSubpath: images
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Images
+  defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: false
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Feature Images
-  restrictedLocationSubpath: null
-  selectionLabel: null
+  restrictedLocationSource: 'volume:0153a64f-ddaf-439f-8f3d-f8bb728de6ec' # Images
+  restrictedLocationSubpath: images
+  selectionLabel: 'Add hero image'
   showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
@@ -28,7 +29,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: cards
+  viewMode: large
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

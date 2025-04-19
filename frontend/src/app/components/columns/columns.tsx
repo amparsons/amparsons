@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import columns from "./columns.module.scss";
+import type { ColumnsProps } from '../../types';
 
-export default async function Columns() {
+export default async function Columns({ title, editor, image }: ColumnsProps) {
 
   return (
     <section className={columns.columns}>

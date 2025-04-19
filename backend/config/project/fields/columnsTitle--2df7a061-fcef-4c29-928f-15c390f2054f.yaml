@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: pageName
+handle: columnsTitle
 instructions: null
-name: 'Page name'
+name: 'Columns title'
 searchable: false
 settings:
   byteLimit: null
@@ -9,7 +9,7 @@ settings:
   code: false
   initialRows: 4
   multiline: false
-  placeholder: 'Enter the page title'
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

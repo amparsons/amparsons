@@ -1,8 +1,6 @@
 color: null
 fieldLayouts:
-  0450664f-97ba-469f-be61-5c29fb53f010:
-    cardView:
-      - id
+  b954a53f-a2d2-4e22-b22b-101296e291b7:
     tabs:
       -
         elementCondition: null
@@ -12,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-23T20:01:56+00:00'
+            dateAdded: '2025-03-23T15:30:40+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -33,14 +31,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 93613651-915c-4ddc-bc35-3aebb67c17d8
+            uid: ef533f91-63c6-4f18-a89b-11096ea9026b
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-23T20:03:48+00:00'
+            dateAdded: '2025-04-18T16:15:02+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: f0cdc71a-c6b0-46e4-807e-d5f2be29b833 # Feature image
+            fieldUid: a514d3c5-ccea-4f2a-a991-9e0e03bc36e5 # Page Builder
             handle: null
             includeInCards: false
             instructions: null
@@ -49,17 +48,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eb86314e-bece-49a0-98c9-2ec6a1b304d1
+            uid: fa2bf571-9279-4c39-a02a-26bd87352866
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: d6c54e90-c023-4ed4-986d-31cd98b38b64
+        uid: c90c9ac0-7dfc-4be2-abd3-1bf4ae928a16
         userCondition: null
-handle: cta
+handle: componenets
 hasTitleField: true
-icon: null
-name: CTA
+icon: shapes
+name: Components
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,22 +1,23 @@
 columnSuffix: null
-handle: contentBlocks
+handle: pageBuilder
 instructions: null
-name: 'Content Blocks'
+name: 'Page Builder'
 searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 52f0f57e-c306-4ce8-b1e8-e97fdead64fc # CTA Component
+          - 77e1affc-6398-444b-b864-255bbe288f46 # Hero
     -
       __assoc__:
         -
           - uid
-          - 402c7b37-85b9-4b95-a7db-22f70c482081 # Hero
+          - c493a1c9-117a-4bf4-906d-76c7e5665183 # Columns
   includeTableView: false
   maxEntries: null
   minEntries: null

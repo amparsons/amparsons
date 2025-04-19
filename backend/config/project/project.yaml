@@ -1,4 +1,4 @@
-dateModified: 1742762524
+dateModified: 1745093487
 email:
   fromEmail: annemarie@amparsons.co.uk
   fromName: 'Freelance Front-end Developer'
@@ -13,21 +13,26 @@ fs:
     url: null
 meta:
   __names__:
-    1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46: General # General
+    1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46: Components # Components
+    2df7a061-fcef-4c29-928f-15c390f2054f: 'Columns title' # Columns title
     2e3ba3f6-b2fa-4e5f-a4da-e458e943659a: 'Freelance Front-end Developer' # Freelance Front-end Developer
     4a2585d8-9b99-4f41-85cd-afdc271a8f5c: Headless # Headless
-    8a1a3de2-291e-4bbd-b4f1-565c5f08021a: pageTitle # pageTitle
-    09b45cd8-eab9-448a-8e38-270913baca16: CTA # CTA
-    47b0b20c-3a52-481c-8f33-b2a5a0c3b41e: home # home
-    0153a64f-ddaf-439f-8f3d-f8bb728de6ec: 'Feature Images' # Feature Images
+    6a06764d-08c8-4133-a298-ff2e68dfb3d3: 'Hero image' # Hero image
+    29fd22b2-0171-4cbb-adc2-a322ad20b4d2: 'Hero cta link' # Hero cta link
+    77e1affc-6398-444b-b864-255bbe288f46: Hero # Hero
+    78c95dd1-af3f-4f1c-a468-62f5ded1d4c6: Blog # Blog
+    0153a64f-ddaf-439f-8f3d-f8bb728de6ec: Images # Images
     4190c3a1-4344-4993-9bc0-18c7c647450e: Editor # Editor
-    5765e8f2-59c3-4d6c-9d78-01092c8f47c8: 'Matric test' # Matric test
-    83726e8b-7ebd-4e41-a5fc-cb64d6475f84: 'Page name' # Page name
+    5737f9ae-34ed-4572-98cc-42a713940742: Home # Home
+    a514d3c5-ccea-4f2a-a991-9e0e03bc36e5: 'Page Builder' # Page Builder
+    a548b92e-040d-4163-a70b-c848db1c818a: 'Columns image' # Columns image
+    ad8b6421-760a-4fbf-aae8-95ce9262ef59: 'Columns editor' # Columns editor
     b3c8a8f4-2b91-4313-907b-0a2c01eb543f: 'Freelance Front-end Developer' # Freelance Front-end Developer
-    c6f2bbff-6ff0-4801-9dcf-338168643bec: pages # pages
+    c6f2bbff-6ff0-4801-9dcf-338168643bec: Pages # Pages
     c232be3d-a138-4712-969a-61cf1915c8a2: 'Public Schema' # Public Schema
+    c493a1c9-117a-4bf4-906d-76c7e5665183: Columns # Columns
     d29b6322-43da-40b9-a5d2-ea029768fe48: Simple # Simple
-    f0cdc71a-c6b0-46e4-807e-d5f2be29b833: 'Feature image' # Feature image
+    d6123dd2-a96c-45d4-8def-2604c022bcd6: 'Hero heading' # Hero heading
 plugins:
   ckeditor:
     edition: standard
@@ -41,7 +46,7 @@ system:
   edition: solo
   live: true
   name: 'Freelance Front-end Developer'
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.7.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
