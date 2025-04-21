@@ -7,7 +7,7 @@
     &__title {
         font-size: clamp(2rem, 15vw, 12rem);
         line-height: .9;
-        font-family: vars.$title-font;
+        font-weight: 700;
         text-transform: uppercase;
         align-self: center;
         background: url('../../images/me.jpg');

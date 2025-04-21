@@ -10,7 +10,7 @@ body {
 	padding: 0;
 	color: var(--white);
 	background: var(--black);
-	font-family: vars.$body-font;
+	font-family: var(--font-gilroy), sans-serif;
 	line-height: 150%;
 }
 

@@ -24,7 +24,7 @@ export function createApolloClient(): ApolloClient<NormalizedCacheObject> {
       uri, // URL for your GraphQL endpoint
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`, // Authorization header with token
+        Authorization: `Bearer ${token}`, 
       },
     }),
     cache: new InMemoryCache(), // In-memory caching for the Apollo Client
