@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import Columns from '../components/columns/columns';
+import Footer from '../components/footer/footer';
 import type { PageBuilderBlock, GetPageBySlugResponse } from '../types';
 import '../styles/global-variables.scss';
 import '../styles/styles.scss';
@@ -25,10 +26,19 @@ const PAGE_QUERY = gql`
           __typename
           ... on hero_Entry {
             heroheading
+            heroHeadingTwo
+            heroText
             heroimage {
               url
               filename
-              alt
+              ... on images_Asset {
+                id
+                filename
+                url
+                alt
+                width
+                height	
+              }
             }
           }
           ... on columns_Entry {
@@ -74,7 +84,12 @@ export default async function Page(props: PageProps) {
           {blocks.map((block: PageBuilderBlock, index: number) => {
               switch (block.__typename) {
               case 'hero_Entry':
-                  return <Hero key={index} heading={block.heroheading || ''} images={block.heroimage || []}  />;
+                  return <Hero key={index} 
+                  heading={block.heroheading || ''} 
+                  headingTwo={block.heroHeadingTwo || ''} 
+                  heroText={block.heroText || ''} 
+                  image={block.heroimage?.[0] ?? null} 
+                />;
               case 'columns_Entry':
                   return (
                   <Columns
@@ -89,6 +104,7 @@ export default async function Page(props: PageProps) {
               }
           })}
       </main>
+      <Footer></Footer>
     </>
   );
 }

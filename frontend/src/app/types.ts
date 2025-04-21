@@ -23,11 +23,21 @@ export interface Asset {
   id: string;
   filename: string;
   alt: string;
+  width?: number;
+  height?: number;
 }
 
 export interface HeroProps {
   heading: string;
-  images: Asset[];
+  headingTwo: string;
+  heroText: string;
+  image: {
+    url: string;
+    filename: string;
+    alt?: string;
+    width?: number;
+    height?: number;
+  } | null;
 }
 
 export interface ColumnsProps {
@@ -39,6 +49,8 @@ export interface ColumnsProps {
 export interface PageBuilderBlock {
   __typename: string;
   heroheading?: string;
+  heroHeadingTwo?: string;
+  heroText?: string;
   heroimage?: Asset[];
   columnsTitle?: string;
   columnsEditor?: string;
