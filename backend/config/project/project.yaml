@@ -1,4 +1,4 @@
-dateModified: 1745093487
+dateModified: 1745250047
 email:
   fromEmail: annemarie@amparsons.co.uk
   fromName: 'Freelance Front-end Developer'
@@ -17,6 +17,7 @@ meta:
     2df7a061-fcef-4c29-928f-15c390f2054f: 'Columns title' # Columns title
     2e3ba3f6-b2fa-4e5f-a4da-e458e943659a: 'Freelance Front-end Developer' # Freelance Front-end Developer
     4a2585d8-9b99-4f41-85cd-afdc271a8f5c: Headless # Headless
+    5a8a49b2-9534-48e3-ae9a-32a085c39369: 'Hire me email' # Hire me email
     6a06764d-08c8-4133-a298-ff2e68dfb3d3: 'Hero image' # Hero image
     29fd22b2-0171-4cbb-adc2-a322ad20b4d2: 'Hero cta link' # Hero cta link
     77e1affc-6398-444b-b864-255bbe288f46: Hero # Hero
@@ -26,13 +27,17 @@ meta:
     5737f9ae-34ed-4572-98cc-42a713940742: Home # Home
     a514d3c5-ccea-4f2a-a991-9e0e03bc36e5: 'Page Builder' # Page Builder
     a548b92e-040d-4163-a70b-c848db1c818a: 'Columns image' # Columns image
+    aaee0d31-58d0-4e9e-a079-a88a81f426b0: Settings # Settings
     ad8b6421-760a-4fbf-aae8-95ce9262ef59: 'Columns editor' # Columns editor
     b3c8a8f4-2b91-4313-907b-0a2c01eb543f: 'Freelance Front-end Developer' # Freelance Front-end Developer
+    b311448a-f02d-4388-a913-77b7263692da: 'Hire me subject' # Hire me subject
     c6f2bbff-6ff0-4801-9dcf-338168643bec: Pages # Pages
+    c35b0adf-86e5-4af1-b07a-2e12c6f26068: 'Site settings' # Site settings
     c232be3d-a138-4712-969a-61cf1915c8a2: 'Public Schema' # Public Schema
     c493a1c9-117a-4bf4-906d-76c7e5665183: Columns # Columns
     d29b6322-43da-40b9-a5d2-ea029768fe48: Simple # Simple
     d6123dd2-a96c-45d4-8def-2604c022bcd6: 'Hero heading' # Hero heading
+    e3910ebc-aae8-4fca-a21b-08c4b1b6e24b: 'Hire me label' # Hire me label
 plugins:
   ckeditor:
     edition: standard

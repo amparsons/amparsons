@@ -5,8 +5,18 @@ export interface NavigationEntry {
   url: string;
 }
 
+export interface GetSettings {
+  hireMeEmail: string;
+  hireMeLabel: string;
+  hireMeSubject: string;
+}
+
 export interface GetNavigationPagesResponse {
   entries: NavigationEntry[];
+}
+
+export interface GetSettingsPageResponse {
+  siteSettingsEntries: GetSettings[];
 }
 
 export interface Asset {

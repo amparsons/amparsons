@@ -5,6 +5,8 @@ import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import Columns from '../components/columns/columns';
 import type { PageBuilderBlock, GetPageBySlugResponse } from '../types';
+import '../styles/global-variables.scss';
+import '../styles/styles.scss';
 
 interface PageProps {
   params: {
@@ -62,8 +64,6 @@ export default async function Page(props: PageProps) {
   if (!entry) {
     return notFound();
   }
-
-  console.log(entry.pageBuilder);
 
   const blocks = entry.pageBuilder ?? [];
 

@@ -7,12 +7,12 @@ import './globals.css';
 const gilroy = localFont({
   src: [
     {
-      path: './fonts/gilroy-regular.woff2',
+      path: '/fonts/gilroy-regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/gilroy-heavy-webfont.woff2',
+      path: '/fonts/gilroy-heavy-webfont.woff2',
       weight: '700',
       style: 'normal',
     },

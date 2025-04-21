@@ -6,6 +6,7 @@ scope:
   - 'elements.revisions:read'
   - 'elements.inactive:read'
   - 'sections.5737f9ae-34ed-4572-98cc-42a713940742:read' # Home
+  - 'sections.c35b0adf-86e5-4af1-b07a-2e12c6f26068:read' # Site settings
   - 'sections.78c95dd1-af3f-4f1c-a468-62f5ded1d4c6:read' # Blog
   - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:read' # Pages
   - 'nestedentryfields.4190c3a1-4344-4993-9bc0-18c7c647450e:read' # Editor
