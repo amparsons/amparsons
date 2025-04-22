@@ -9,6 +9,13 @@ export interface GetSettings {
   hireMeEmail: string;
   hireMeLabel: string;
   hireMeSubject: string;
+  linkedinUrl: {
+    url: string;
+  }
+  githubUrl: {
+    url: string;
+  };
+  
 }
 
 export interface GetNavigationPagesResponse {
@@ -44,7 +51,15 @@ export interface HeroProps {
 export interface ColumnsProps {
   title: string;
   editor: string;
-  images: Asset[];
+  image: {
+    url: string;
+    filename: string;
+    alt?: string;
+    width?: number;
+    height?: number;
+  } | null;
+  hireemail: string;
+  linkedin: string;
 }
 
 export interface PageBuilderBlock {

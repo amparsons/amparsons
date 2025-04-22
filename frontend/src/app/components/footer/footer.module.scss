@@ -38,6 +38,11 @@
         display: flex;
     }
 
+    &__linkWrap {
+        display: flex;
+        align-items: center;
+    }
+
     &__craft {
         max-width: 90px;
         height: auto;

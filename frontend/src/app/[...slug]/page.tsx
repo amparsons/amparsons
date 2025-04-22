@@ -5,7 +5,7 @@ import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import Columns from '../components/columns/columns';
 import Footer from '../components/footer/footer';
-import type { PageBuilderBlock, GetPageBySlugResponse } from '../types';
+import type { PageBuilderBlock, GetPageBySlugResponse, GetSettingsPageResponse } from '../types';
 import '../styles/global-variables.scss';
 import '../styles/styles.scss';
 
@@ -56,6 +56,23 @@ const PAGE_QUERY = gql`
   }
 `;
 
+const GET_SETTINGS = gql`
+  query GetSettingsPage {
+    siteSettingsEntries {
+      ... on settings_Entry {
+        hireMeEmail
+        hireMeEmail
+        githubUrl {
+          url
+        }
+        linkedinUrl {
+          url
+        }
+      }
+    }
+  }
+`;
+
 export default async function Page(props: PageProps) {
   const params = await props.params;
 
@@ -76,7 +93,12 @@ export default async function Page(props: PageProps) {
   }
 
   const blocks = entry.pageBuilder ?? [];
-  console.log('GraphQL data:', JSON.stringify(data, null, 2));
+  //console.log('GraphQL data:', JSON.stringify(data, null, 2));
+
+  const { data: settingsData } = await client.query<GetSettingsPageResponse>({
+    query: GET_SETTINGS,
+  });
+  const settings = settingsData.siteSettingsEntries?.[0];
 
   return (
     <>
@@ -108,7 +130,19 @@ export default async function Page(props: PageProps) {
                       key={index}
                       title={block.columnsTitle || ''}
                       editor={block.columnsEditor || ''}
-                      images={block.columnsImage || []}
+                      image={
+                        block.columnsImage?.[0]
+                          ? {
+                              url: block.columnsImage[0].url,
+                              filename: block.columnsImage[0].filename,
+                              alt: block.columnsImage[0].alt ?? '',
+                              width: block.columnsImage[0].width,
+                              height: block.columnsImage[0].height,
+                            }
+                          : null
+                      }
+                      hireemail={settings.hireMeEmail || ''}
+                      linkedin={settings.linkedinUrl?.url || ''}
                   />
                   );
               default:
