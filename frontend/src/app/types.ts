@@ -21,6 +21,7 @@ export interface GetSettingsPageResponse {
 
 export interface Asset {
   id: string;
+  url: string;
   filename: string;
   alt: string;
   width?: number;

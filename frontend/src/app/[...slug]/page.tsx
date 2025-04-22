@@ -90,7 +90,17 @@ export default async function Page(props: PageProps) {
                   heading={block.heroheading || ''} 
                   headingTwo={block.heroHeadingTwo || ''} 
                   heroDesc={block.heroDesc || ''} 
-                  image={block.heroimage?.[0] ?? null} 
+                  image={
+                    block.heroimage?.[0]
+                      ? {
+                          url: block.heroimage[0].url,
+                          filename: block.heroimage[0].filename,
+                          alt: block.heroimage[0].alt ?? '',
+                          width: block.heroimage[0].width,
+                          height: block.heroimage[0].height,
+                        }
+                      : null
+                  }
                 />;
               case 'columns_Entry':
                   return (
