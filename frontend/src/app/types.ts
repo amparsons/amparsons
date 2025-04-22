@@ -30,7 +30,7 @@ export interface Asset {
 export interface HeroProps {
   heading: string;
   headingTwo: string;
-  heroText: string;
+  heroDesc: string;
   image: {
     url: string;
     filename: string;
@@ -50,7 +50,7 @@ export interface PageBuilderBlock {
   __typename: string;
   heroheading?: string;
   heroHeadingTwo?: string;
-  heroText?: string;
+  heroDesc?: string;
   heroimage?: Asset[];
   columnsTitle?: string;
   columnsEditor?: string;

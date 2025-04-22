@@ -23,6 +23,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-22T13:50:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 64683d3b-41d1-400d-9550-96e6bb09ad76 # Hero heading two
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5ba58e6-c01d-4fa2-9d11-8b5706bbbe65
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-18T16:06:46+00:00'
             editCondition: null
             elementCondition: null
@@ -40,10 +57,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-18T19:37:20+00:00'
+            dateAdded: '2025-04-22T13:50:47+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 29fd22b2-0171-4cbb-adc2-a322ad20b4d2 # Hero cta link
+            fieldUid: 557631a2-a862-4ecd-a8f0-b65cf1c26c96 # Hero desc
             handle: null
             includeInCards: false
             instructions: null
@@ -52,7 +69,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bfac16a8-6893-4f08-bc26-dfac109e6366
+            uid: 6d79b20b-d2df-44d8-a673-6d137305f428
             userCondition: null
             warning: null
             width: 100

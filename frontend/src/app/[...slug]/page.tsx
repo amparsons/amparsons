@@ -27,7 +27,7 @@ const PAGE_QUERY = gql`
           ... on hero_Entry {
             heroheading
             heroHeadingTwo
-            heroText
+            heroDesc
             heroimage {
               url
               filename
@@ -76,18 +76,20 @@ export default async function Page(props: PageProps) {
   }
 
   const blocks = entry.pageBuilder ?? [];
+  console.log('GraphQL data:', JSON.stringify(data, null, 2));
 
   return (
     <>
       <Header></Header>
       <main>
+        
           {blocks.map((block: PageBuilderBlock, index: number) => {
               switch (block.__typename) {
               case 'hero_Entry':
                   return <Hero key={index} 
                   heading={block.heroheading || ''} 
                   headingTwo={block.heroHeadingTwo || ''} 
-                  heroText={block.heroText || ''} 
+                  heroDesc={block.heroDesc || ''} 
                   image={block.heroimage?.[0] ?? null} 
                 />;
               case 'columns_Entry':

@@ -1,16 +1,16 @@
-dateModified: 1745250047
+dateModified: 1745336477
 email:
   fromEmail: annemarie@amparsons.co.uk
   fromName: 'Freelance Front-end Developer'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   images:
-    hasUrls: false
+    hasUrls: true
     name: images
     settings:
-      path: images
+      path: '@webroot'
     type: craft\fs\Local
-    url: null
+    url: $ASSETS_BASE_URL
 meta:
   __names__:
     1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46: Components # Components
@@ -25,6 +25,8 @@ meta:
     0153a64f-ddaf-439f-8f3d-f8bb728de6ec: Images # Images
     4190c3a1-4344-4993-9bc0-18c7c647450e: Editor # Editor
     5737f9ae-34ed-4572-98cc-42a713940742: Home # Home
+    64683d3b-41d1-400d-9550-96e6bb09ad76: 'Hero heading two' # Hero heading two
+    557631a2-a862-4ecd-a8f0-b65cf1c26c96: 'Hero desc' # Hero desc
     a514d3c5-ccea-4f2a-a991-9e0e03bc36e5: 'Page Builder' # Page Builder
     a548b92e-040d-4163-a70b-c848db1c818a: 'Columns image' # Columns image
     aaee0d31-58d0-4e9e-a079-a88a81f426b0: Settings # Settings
