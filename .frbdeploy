@@ -1,3 +1,4 @@
 # .frbdeploy
 cd backend
-composer install --no-dev --optimize-autoloader
+echo "👉 Running composer in $(pwd)" >> frb-deploy.log
+composer install --no-dev --optimize-autoloader >> frb-deploy.log 2>&1
