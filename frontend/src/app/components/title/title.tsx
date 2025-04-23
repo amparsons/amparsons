@@ -39,7 +39,7 @@ export default function Title() {
           animate={ isMobile ? { y: 0 } : isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 50 }} 
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-        Not all of the work I've done I am able to share due to NDA's. Here is a selection of projects I have worked on that I can showcase.
+        Not all of the work I&apos;ve done I am able to share due to NDA&apos;s. Here is a selection of projects I have worked on that I can showcase.
       </motion.p>
     </div>
   );

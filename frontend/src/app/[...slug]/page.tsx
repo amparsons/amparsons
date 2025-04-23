@@ -10,9 +10,7 @@ import '../styles/global-variables.scss';
 import '../styles/styles.scss';
 
 interface PageProps {
-  params: {
-    slug?: string[];
-  };
+  params: Promise<{ slug?: string[] }>;
 }
 
 const PAGE_QUERY = gql`
@@ -73,17 +71,14 @@ const GET_SETTINGS = gql`
   }
 `;
 
-export default async function Page(props: PageProps) {
-  const params = await props.params;
-
-  const slugArray = params.slug ?? [];
-  const slugPath = slugArray.join('/') || 'home';
-
+export default async function Page({ params }: PageProps) {
+  const resolvedParams = await params;
+  const slugArray = resolvedParams.slug ?? ['home'];
   const client = createApolloClient();
 
   const { data } = await client.query<GetPageBySlugResponse>({
     query: PAGE_QUERY,
-    variables: { slug: slugPath },
+    variables: { slug: slugArray },
   });
 
   const entry = data.entries?.[0];
@@ -93,7 +88,6 @@ export default async function Page(props: PageProps) {
   }
 
   const blocks = entry.pageBuilder ?? [];
-  //console.log('GraphQL data:', JSON.stringify(data, null, 2));
 
   const { data: settingsData } = await client.query<GetSettingsPageResponse>({
     query: GET_SETTINGS,
