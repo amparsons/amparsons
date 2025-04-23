@@ -1,6 +1,6 @@
 /.env
 /.idea
-/vendor
+# /vendor
 .DS_Store
 node_modules/
 
@@ -13,7 +13,7 @@ node_modules/
 /backend/config/license.key
 
 # Ignore vendor directory (if using Composer)
-backend/vendor/
+# backend/vendor/
 
 # Ignore cache and temporary files
 /backend/storage/

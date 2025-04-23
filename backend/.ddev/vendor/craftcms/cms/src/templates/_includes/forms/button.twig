@@ -1,0 +1,51 @@
+{% set spinner = spinner ?? false -%}
+{% set busyMessage = busyMessage ?? false %}
+{% set failureMessage = failureMessage ?? false %}
+{% set retryMessage = retryMessage ?? false %}
+{% set successMessage = successMessage ?? false %}
+{% set enableLiveRegion = busyMessage or failureMessage or retryMessage or successMessage %}
+{% set icon = icon ?? null %}
+{% set label = label ?? null %}
+{% set labelHtml = labelHtml ?? null %}
+{% set attributes = {
+    type: type ?? 'button',
+    id: id ?? false,
+    class: (class ?? [])|explodeClass|merge([
+        'btn',
+        not (icon or label or labelHtml) ? 'btn-empty' : null,
+        (disabled ?? false) ? 'disabled',
+    ]|filter),
+    data: {
+        'busy-message': busyMessage,
+        'failure-message': failureMessage,
+        'retry-message': retryMessage,
+        'success-message': successMessage,
+    }|merge(attributes.data ?? {}),
+}|merge(attributes ?? {}) -%}
+
+{% apply spaceless %}
+    {% if spinner and enableLiveRegion %}
+        <div role="status" class="visually-hidden"></div>
+    {% endif %}
+    {% tag 'button' with attributes %}
+        {% if icon or label or labelHtml %}
+            <div class="inline-flex">
+                {% if icon %}
+                    <div class="cp-icon">{{ iconSvg(icon) }}</div>
+                {% endif %}
+                {% if label or labelHtml %}
+                    {{ tag('div', {
+                        class: 'label',
+                        text: label,
+                        html: labelHtml,
+                    }) }}
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if spinner %}
+            <div class="spinner spinner-absolute">
+                <span class="visually-hidden">{{ 'Loading'|t('app') }}</span>
+            </div>
+        {% endif %}
+    {% endtag %}
+{% endapply -%}
