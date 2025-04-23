@@ -13,6 +13,8 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: false
+use_ssh_agent_forwarding: true
+
 
 # Key features of DDEV's config.yaml:
 
