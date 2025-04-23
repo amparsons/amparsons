@@ -8,7 +8,7 @@ export default async function Hero({ heading, headingTwo, heroDesc, image }: Her
         <div className={hero.hero}>
             <h1
               className={hero.hero__title}
-              style={image ? { backgroundImage: `url(${image.url})` } : undefined}
+              style={image ? { backgroundImage: `url('${image.url}')` } : undefined}
             >
               {heading && <span>{heading}</span>}
               {headingTwo && <span>{headingTwo}</span>}
