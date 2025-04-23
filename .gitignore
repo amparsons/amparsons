@@ -8,6 +8,7 @@ node_modules/
 /backend/.env
 /backend/.env.local
 /backend/.env.dev
+/backend/.env.production
 /backend/config/license.key.1
 /backend/config/license.key
 
