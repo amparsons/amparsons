@@ -12,4 +12,6 @@ return [
         '@webroot' => dirname(__DIR__) . '/web',
     ],
     'devMode' => App::env('APP_ENV') !== 'production',
+    'logLevel' => \yii\log\Logger::LEVEL_TRACE,
+    'logFile' => '@storage/logs/craft.log',
 ];
