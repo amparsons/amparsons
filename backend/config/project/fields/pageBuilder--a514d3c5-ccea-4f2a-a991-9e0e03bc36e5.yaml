@@ -1,0 +1,31 @@
+columnSuffix: null
+handle: pageBuilder
+instructions: null
+name: 'Page Builder'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 77e1affc-6398-444b-b864-255bbe288f46 # Hero
+    -
+      __assoc__:
+        -
+          - uid
+          - c493a1c9-117a-4bf4-906d-76c7e5665183 # Columns
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: hireMeLabel
+instructions: null
+name: 'Hire me label'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: 'Hire Me!'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

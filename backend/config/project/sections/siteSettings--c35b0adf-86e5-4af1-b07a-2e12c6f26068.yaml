@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: aaee0d31-58d0-4e9e-a079-a88a81f426b0 # Settings
+handle: siteSettings
+maxAuthors: 1
+name: 'Site settings'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  b3c8a8f4-2b91-4313-907b-0a2c01eb543f: # Freelance Front-end Developer
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: site-settings
+type: single

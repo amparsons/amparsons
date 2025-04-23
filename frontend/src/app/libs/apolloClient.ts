@@ -5,15 +5,28 @@ import {
   NormalizedCacheObject,
 } from '@apollo/client';
 
-const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
-  link: new HttpLink({
-    uri: process.env.CRAFT_CMS_GRAPHQL_ENDPOINT,
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.CRAFT_CMS_GRAPHQL_TOKEN}`,
-    },
-  }),
-  cache: new InMemoryCache(),
-});
+export function createApolloClient(): ApolloClient<NormalizedCacheObject> {
+  const uri = process.env.CRAFT_CMS_GRAPHQL_ENDPOINT;
+  const token = process.env.CRAFT_CMS_GRAPHQL_TOKEN;
 
-export default client;
+  // Throw errors if required environment variables are not set
+  if (!uri) {
+    throw new Error('CRAFT_CMS_GRAPHQL_ENDPOINT is not defined');
+  }
+
+  if (!token) {
+    throw new Error('CRAFT_CMS_GRAPHQL_TOKEN is not defined');
+  }
+
+  // Create and return Apollo Client
+  return new ApolloClient({
+    link: new HttpLink({
+      uri, // URL for your GraphQL endpoint
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`, 
+      },
+    }),
+    cache: new InMemoryCache(), // In-memory caching for the Apollo Client
+  });
+}

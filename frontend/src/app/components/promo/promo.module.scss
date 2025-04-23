@@ -4,10 +4,14 @@
     display: flex;
     min-height: 300px;
     font-size: clamp(2rem, 3vw, 4rem);
-    margin-top: calc(vars.$margin * 3);
-    font-family: vars.$title-font;
+   
+    font-weight: 700;
     margin-bottom: vars.$margin;
     background:  var(--black);
+
+    @include vars.media('tablet') {
+        margin-top: calc(vars.$margin * 3);
+    }
 
     &__title {
         max-width: 80%;
@@ -21,12 +25,15 @@
         margin: 0;
         padding: 0;
         display: grid;
-        grid-template-columns: repeat(6, 1fr); /* 8 columns */
-        grid-template-rows: repeat(2, auto); 
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+       // grid-template-rows: repeat(2, auto); 
         width: 100%;
-        min-height: calc(var(--vh, 1vh)*30);
         margin: 0;
         grid-gap: 2px;
+
+        @include vars.media('desktop') {
+            grid-template-columns: repeat(6, 1fr);
+        }
     }
 
     &__logo {
@@ -35,7 +42,7 @@
         align-items: center;
         justify-content: center;
         height: 160px;
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(1rem, 2vw, 2rem);
         line-height: 120%;
         text-align: center;
         padding: 20px;

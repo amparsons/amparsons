@@ -1,14 +1,7 @@
 isPublic: true
 name: 'Public Schema'
 scope:
-  - 'sites.b3c8a8f4-2b91-4313-907b-0a2c01eb543f:read' # Freelance Front-end Developer
-  - 'elements.drafts:read'
-  - 'elements.revisions:read'
-  - 'elements.inactive:read'
-  - 'sections.47b0b20c-3a52-481c-8f33-b2a5a0c3b41e:read' # home
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:read' # pages
-  - 'sections.47b0b20c-3a52-481c-8f33-b2a5a0c3b41e:save' # home
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:edit' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:create' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:save' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:delete' # pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:edit' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:create' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:save' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:delete' # Pages

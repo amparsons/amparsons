@@ -5,19 +5,35 @@
    position: relative;
    display: flex;
    align-items: center;
-   margin: 60px 0;
+   flex-direction: column;
+   margin-bottom: vars.$margin;
+   
+   @include vars.media('tablet') {
+      flex-direction: row;
+      margin: 60px 0;
+   }
 
    &__image {
-      width: 60%;
-      margin: 60px 0;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
       color: var(--white);
+
+      @include vars.media('tablet') {
+         width: 60%;
+      }
+
    }
 
    &__content {
-      width: 40%;
+      width: 100%;
       min-height: 300px;
       padding: vars.$margin;
       background: var(--offBlack);
+
+      @include vars.media('tablet') {
+         width: 40%;
+      }
    }
 
    &__text {
@@ -26,17 +42,20 @@
    }
 
    &--flipped {
-      flex-direction: row-reverse;
+
+      @include vars.media('tablet') {
+         flex-direction: row-reverse;
+      }
    }
 
    &__title {
-      font-size: clamp(1rem, 10vw, 2rem);
+      font-size: clamp(1rem, 7vw, 2rem);
       margin-bottom:vars.$margin;
       font-family: vars.$title-font;
    }
 
    &__intro {
-      font-size: clamp(.8rem, 10vw, 1.2rem);
+      font-size: clamp(1rem, 4vw, 1.2rem);
       line-height: 130%;
       margin-bottom: vars.$margin;
    }

@@ -5,13 +5,16 @@ scope:
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'
-  - 'sections.47b0b20c-3a52-481c-8f33-b2a5a0c3b41e:read' # home
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:read' # pages
+  - 'sections.5737f9ae-34ed-4572-98cc-42a713940742:read' # Home
+  - 'sections.c35b0adf-86e5-4af1-b07a-2e12c6f26068:read' # Site settings
+  - 'sections.78c95dd1-af3f-4f1c-a468-62f5ded1d4c6:read' # Blog
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:read' # Pages
   - 'nestedentryfields.4190c3a1-4344-4993-9bc0-18c7c647450e:read' # Editor
-  - 'nestedentryfields.5765e8f2-59c3-4d6c-9d78-01092c8f47c8:read' # Matric test
-  - 'volumes.0153a64f-ddaf-439f-8f3d-f8bb728de6ec:read' # Feature Images
-  - 'sections.47b0b20c-3a52-481c-8f33-b2a5a0c3b41e:save' # home
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:edit' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:create' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:save' # pages
-  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:delete' # pages
+  - 'nestedentryfields.557631a2-a862-4ecd-a8f0-b65cf1c26c96:read' # Hero desc
+  - 'nestedentryfields.a514d3c5-ccea-4f2a-a991-9e0e03bc36e5:read' # Page Builder
+  - 'volumes.0153a64f-ddaf-439f-8f3d-f8bb728de6ec:read' # Images
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:edit' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:create' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:save' # Pages
+  - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:delete' # Pages
+  - 'volumes.0153a64f-ddaf-439f-8f3d-f8bb728de6ec:edit' # Images

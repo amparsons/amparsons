@@ -12,19 +12,6 @@ $margin: 30px;
     @return math.div($size, $base-font-size) * 1rem;
 }
 
-@font-face {
-    font-family: 'Gilroy Regular';
-    src: url('../../fonts/gilroy-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy Heavy';
-    src: url('../../fonts/gilroy-heavy-webfont.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
 
 $breakpoints: (
     'mobile': 400px,

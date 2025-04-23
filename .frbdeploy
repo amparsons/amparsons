@@ -1,0 +1,6 @@
+# .frbdeploy
+cd backend
+echo "👉 Checking PHP version: $(php -v)" >> frb-deploy.log
+echo "👉 Checking Composer version: $(composer -v)" >> frb-deploy.log
+echo "👉 Running composer in $(pwd)" >> frb-deploy.log
+composer install --no-dev --optimize-autoloader >> frb-deploy.log 2>&1

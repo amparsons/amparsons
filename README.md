@@ -44,3 +44,7 @@ Fron the front-end directors use node version 23.3.0
 npm install
 npm run dev
 
+API endpoint for local
+https://freelance-frontend.ddev.site:33001/actions/graphql/api
+
+

@@ -13,7 +13,7 @@ settings:
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: false
+  showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
   wordLimit: null

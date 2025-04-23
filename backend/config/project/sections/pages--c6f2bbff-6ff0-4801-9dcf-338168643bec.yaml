@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46 # General
+    uid: 1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46 # Components
 handle: pages
 maxAuthors: 1
-name: pages
+name: Pages
 previewTargets:
   -
     __assoc__:

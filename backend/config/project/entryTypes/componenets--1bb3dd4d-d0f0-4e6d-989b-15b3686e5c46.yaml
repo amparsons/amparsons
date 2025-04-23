@@ -1,0 +1,68 @@
+color: null
+fieldLayouts:
+  b954a53f-a2d2-4e22-b22b-101296e291b7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-23T15:30:40+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ef533f91-63c6-4f18-a89b-11096ea9026b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-18T16:15:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: a514d3c5-ccea-4f2a-a991-9e0e03bc36e5 # Page Builder
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa2bf571-9279-4c39-a02a-26bd87352866
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c90c9ac0-7dfc-4be2-abd3-1bf4ae928a16
+        userCondition: null
+handle: componenets
+hasTitleField: true
+icon: shapes
+name: Components
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
