@@ -2,10 +2,10 @@
 
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { CardProps } from '../../types';
+//import { CardProps } from '../../types';
 import card from "./card.module.scss";
 
-export default function Card({ isFlipped = false }: CardProps) {
+export default function Card({ isFlipped = false }) {
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" });
