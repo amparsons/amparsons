@@ -1,11 +1,8 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  //output: 'export',
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ['freelance-frontend.ddev.site'], // due to using remote images we need to accept the domain
+    domains: ['freelance-frontend.ddev.site'],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
