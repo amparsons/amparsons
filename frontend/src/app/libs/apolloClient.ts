@@ -26,9 +26,6 @@ export function createApolloClient(): ApolloClient<NormalizedCacheObject> {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`, 
       },
-      fetchOptions: {
-        cache: 'no-store', // prevents caching issues in SSR/SSG
-      },
     }),
     cache: new InMemoryCache(), // In-memory caching for the Apollo Client
   });
