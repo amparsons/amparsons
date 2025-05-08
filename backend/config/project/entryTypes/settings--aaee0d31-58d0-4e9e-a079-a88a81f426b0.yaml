@@ -56,40 +56,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-04-22T18:21:32+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 4d5a7814-e3a4-420a-b697-280b27733d5d # Linkedin URL
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 23b4d36e-abed-4740-8b39-77a311da363b
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-22T18:21:32+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: ec841fb3-1467-4b0e-9970-cb0a8fc31e22 # GitHub URL
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2b79abfe-62c2-4153-9eee-22cef91c7e44
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: 7ec9883f-2307-465f-bca2-79001e4668a0
         userCondition: null

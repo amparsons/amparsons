@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: linkedinUrl
 instructions: null
-name: 'Linkedin URL'
+name: 'Linkedin url'
 searchable: false
 settings:
   fullGraphqlData: true

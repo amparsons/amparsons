@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: heroDesc
+handle: heroText
 instructions: null
-name: 'Hero desc'
+name: 'Hero text'
 searchable: false
 settings:
   availableTransforms: ''

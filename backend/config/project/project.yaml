@@ -1,4 +1,4 @@
-dateModified: 1745346092
+dateModified: 1746703613
 email:
   fromEmail: annemarie@amparsons.co.uk
   fromName: 'Freelance Front-end Developer'
@@ -8,26 +8,25 @@ fs:
     hasUrls: true
     name: images
     settings:
-      path: '@webroot'
+      path: '@webroot/uploads'
     type: craft\fs\Local
-    url: $ASSETS_BASE_URL
+    url: /uploads/
 meta:
   __names__:
     1bb3dd4d-d0f0-4e6d-989b-15b3686e5c46: Components # Components
     2df7a061-fcef-4c29-928f-15c390f2054f: 'Columns title' # Columns title
     2e3ba3f6-b2fa-4e5f-a4da-e458e943659a: 'Freelance Front-end Developer' # Freelance Front-end Developer
     4a2585d8-9b99-4f41-85cd-afdc271a8f5c: Headless # Headless
-    4d5a7814-e3a4-420a-b697-280b27733d5d: 'Linkedin URL' # Linkedin URL
     5a8a49b2-9534-48e3-ae9a-32a085c39369: 'Hire me email' # Hire me email
     6a06764d-08c8-4133-a298-ff2e68dfb3d3: 'Hero image' # Hero image
+    7ad8c33b-e75c-4f2e-89d9-614ef7c90286: 'Hero heading two' # Hero heading two
     29fd22b2-0171-4cbb-adc2-a322ad20b4d2: 'Hero cta link' # Hero cta link
     77e1affc-6398-444b-b864-255bbe288f46: Hero # Hero
     78c95dd1-af3f-4f1c-a468-62f5ded1d4c6: Blog # Blog
     0153a64f-ddaf-439f-8f3d-f8bb728de6ec: Images # Images
     4190c3a1-4344-4993-9bc0-18c7c647450e: Editor # Editor
     5737f9ae-34ed-4572-98cc-42a713940742: Home # Home
-    64683d3b-41d1-400d-9550-96e6bb09ad76: 'Hero heading two' # Hero heading two
-    557631a2-a862-4ecd-a8f0-b65cf1c26c96: 'Hero desc' # Hero desc
+    394774ef-0c9e-4054-9ced-a0f83b294976: 'Hero text' # Hero text
     a514d3c5-ccea-4f2a-a991-9e0e03bc36e5: 'Page Builder' # Page Builder
     a548b92e-040d-4163-a70b-c848db1c818a: 'Columns image' # Columns image
     aaee0d31-58d0-4e9e-a079-a88a81f426b0: Settings # Settings
@@ -40,13 +39,18 @@ meta:
     c493a1c9-117a-4bf4-906d-76c7e5665183: Columns # Columns
     d29b6322-43da-40b9-a5d2-ea029768fe48: Simple # Simple
     d6123dd2-a96c-45d4-8def-2604c022bcd6: 'Hero heading' # Hero heading
+    e50d9fe1-c90d-4813-a09f-7e7d192140c9: 'Linkedin url' # Linkedin url
     e3910ebc-aae8-4fca-a21b-08c4b1b6e24b: 'Hire me label' # Hire me label
-    ec841fb3-1467-4b0e-9970-cb0a8fc31e22: 'GitHub URL' # GitHub URL
+    f4cbeb4a-6394-44cc-bf36-7ed7cf0bb0fd: 'Github url' # Github url
 plugins:
   ckeditor:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  copy:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   webhooks:
     edition: standard
     enabled: true
