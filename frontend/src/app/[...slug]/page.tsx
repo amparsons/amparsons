@@ -83,16 +83,25 @@ export async function generateStaticParams() {
     }
   `;
 
-  const { data } = await client.query({ query: GET_ALL_SLUGS });
+  try {
+    const response = await client.query({ query: GET_ALL_SLUGS });
+    const entries = response.data?.entries;
 
-  if (!data?.entries || data.entries.length === 0) {
-    // Fallback to home page if no entries found
-    return [{ slug: ['home'] }];
+    console.log('✅ Slugs fetched from Craft CMS:', entries);
+
+    if (!entries || entries.length === 0) {
+      console.warn('⚠️ No entries found in Craft CMS during build.');
+      return [{ slug: ['home'] }];
+    }
+
+    return entries.map((entry: { slug: string }) => ({
+      slug: entry.slug ? [entry.slug] : ['home'],
+    }));
+  } catch (error) {
+    console.error('❌ Error fetching slugs from Craft CMS:', error);
+    return [{ slug: ['home'] }]; // fallback
   }
 
-  return data.entries.map((entry: { slug: string }) => ({
-    slug: entry.slug ? [entry.slug] : ['home'],
-  }));
 }
 
 // This tells Next.js to generate only the routes returned above.
