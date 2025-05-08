@@ -85,6 +85,7 @@ export async function generateStaticParams() {
 
   console.log("Building static paths for slugs:", data.entries);
   console.log("SLUGS:", data.entries); 
+  console.log("Craft URL:", process.env.NEXT_PUBLIC_CRAFT_API_URL);
 
   if (!data?.entries || data.entries.length === 0) {
     return [{ slug: ['home'] }];
