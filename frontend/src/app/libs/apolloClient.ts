@@ -6,16 +6,16 @@ import {
 } from '@apollo/client';
 
 export function createApolloClient(): ApolloClient<NormalizedCacheObject> {
-  const uri = process.env.CRAFT_CMS_GRAPHQL_ENDPOINT;
-  const token = process.env.CRAFT_CMS_GRAPHQL_TOKEN;
+  const uri = process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT;
+  const token = process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_TOKEN;
 
   // Throw errors if required environment variables are not set
   if (!uri) {
-    throw new Error('CRAFT_CMS_GRAPHQL_ENDPOINT is not defined');
+    throw new Error('NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT is not defined');
   }
 
   if (!token) {
-    throw new Error('CRAFT_CMS_GRAPHQL_TOKEN is not defined');
+    throw new Error('NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_TOKEN is not defined');
   }
 
   // Create and return Apollo Client

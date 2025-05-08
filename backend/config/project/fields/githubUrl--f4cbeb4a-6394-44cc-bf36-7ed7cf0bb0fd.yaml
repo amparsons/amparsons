@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: githubUrl
 instructions: null
-name: 'GitHub URL'
+name: 'Github url'
 searchable: false
 settings:
   fullGraphqlData: true

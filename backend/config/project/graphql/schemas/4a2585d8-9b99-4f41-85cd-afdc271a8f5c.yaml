@@ -10,7 +10,7 @@ scope:
   - 'sections.78c95dd1-af3f-4f1c-a468-62f5ded1d4c6:read' # Blog
   - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:read' # Pages
   - 'nestedentryfields.4190c3a1-4344-4993-9bc0-18c7c647450e:read' # Editor
-  - 'nestedentryfields.557631a2-a862-4ecd-a8f0-b65cf1c26c96:read' # Hero desc
+  - 'nestedentryfields.394774ef-0c9e-4054-9ced-a0f83b294976:read' # Hero text
   - 'nestedentryfields.a514d3c5-ccea-4f2a-a991-9e0e03bc36e5:read' # Page Builder
   - 'volumes.0153a64f-ddaf-439f-8f3d-f8bb728de6ec:read' # Images
   - 'sections.c6f2bbff-6ff0-4801-9dcf-338168643bec:edit' # Pages
