@@ -10,7 +10,7 @@ import '../styles/global-variables.scss';
 import '../styles/styles.scss';
 
 interface PageProps {
-  params: Promise<{ slug?: string[] }>;
+  params: { slug: string }; // Changed to a string since we are using [slug] (single-segment)
 }
 
 const PAGE_QUERY = gql`
@@ -91,30 +91,29 @@ export async function generateStaticParams() {
 
     if (!entries || entries.length === 0) {
       console.warn('⚠️ No entries found in Craft CMS during build.');
-      return [{ slug: ['home'] }];
+      return [{ slug: 'home' }]; // Return a single string for "home"
     }
 
+    // Return slugs as a simple string, not an array
     return entries.map((entry: { slug: string }) => ({
-      slug: entry.slug ? [entry.slug] : ['home'],
+      slug: entry.slug || 'home', // Default to 'home' if no slug
     }));
   } catch (error) {
     console.error('❌ Error fetching slugs from Craft CMS:', error);
-    return [{ slug: ['home'] }]; // fallback
+    return [{ slug: 'home' }]; // Fallback to 'home' if error occurs
   }
-
 }
 
 // This tells Next.js to generate only the routes returned above.
 export const dynamicParams = false;
 
 export default async function Page({ params }: PageProps) {
-  const resolvedParams = await params;
-  const slugArray = resolvedParams.slug ?? ['home'];
+  const { slug } = params; // Destructure slug from params (since it's now a string)
   const client = createApolloClient();
 
   const { data } = await client.query<GetPageBySlugResponse>({
     query: PAGE_QUERY,
-    variables: { slug: slugArray },
+    variables: { slug: [slug] }, // Pass slug as an array
   });
 
   const entry = data.entries?.[0];
