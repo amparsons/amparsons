@@ -84,6 +84,7 @@ export async function generateStaticParams() {
   const { data } = await client.query({ query: GET_ALL_SLUGS });
 
   console.log("Building static paths for slugs:", data.entries);
+  console.log("SLUGS:", data.entries); 
 
   if (!data?.entries || data.entries.length === 0) {
     return [{ slug: ['home'] }];
