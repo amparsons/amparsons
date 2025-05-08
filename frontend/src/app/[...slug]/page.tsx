@@ -95,6 +95,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// This tells Next.js to generate only the routes returned above.
+export const dynamicParams = false;
+
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const slugArray = resolvedParams.slug ?? ['home'];
