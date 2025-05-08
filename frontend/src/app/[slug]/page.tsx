@@ -59,7 +59,6 @@ const GET_SETTINGS = gql`
     siteSettingsEntries {
       ... on settings_Entry {
         hireMeEmail
-        hireMeEmail
         githubUrl {
           url
         }
@@ -113,7 +112,7 @@ export default async function Page({ params }: PageProps) {
 
   const { data } = await client.query<GetPageBySlugResponse>({
     query: PAGE_QUERY,
-    variables: { slug: [slug] }, // Pass slug as an array
+    variables: { slug: slug }, // Pass slug as an array
   });
 
   const entry = data.entries?.[0];
@@ -127,7 +126,7 @@ export default async function Page({ params }: PageProps) {
   const { data: settingsData } = await client.query<GetSettingsPageResponse>({
     query: GET_SETTINGS,
   });
-  const settings = settingsData.siteSettingsEntries?.[0];
+  const settings = settingsData.siteSettingsEntries?.[0] || {};
 
   return (
     <>
