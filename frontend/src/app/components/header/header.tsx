@@ -49,7 +49,7 @@ export default async function Header() {
         <ul className={header.header__menu}>
           {data.entries.map((entry) => (
             <li key={entry.id} className={header.header__item}>
-              <Link href={entry.slug} className={header.header__link}>
+              <Link href={`/${entry.slug}`} className={header.header__link}>
                 {entry.title}
               </Link>
             </li>
