@@ -5,13 +5,13 @@ import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import Columns from '../components/columns/columns';
 import Footer from '../components/footer/footer';
-import type { PageBuilderBlock, GetPageBySlugResponse, GetSettingsPageResponse } from '../types';
+import type { GetPageBySlugResponse, GetSettingsPageResponse } from '../types';
 import '../styles/global-variables.scss';
 import '../styles/styles.scss';
 
-interface PageProps {
-  params: Promise<{ slug?: string[] }>;
-}
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+export const dynamicParams = false;
 
 const PAGE_QUERY = gql`
   query GetPageBuilderBlocks($slug: [String]) {
@@ -59,7 +59,6 @@ const GET_SETTINGS = gql`
     siteSettingsEntries {
       ... on settings_Entry {
         hireMeEmail
-        hireMeEmail
         githubUrl {
           url
         }
@@ -71,7 +70,6 @@ const GET_SETTINGS = gql`
   }
 `;
 
-// New function to statically generate all paths at build time
 export async function generateStaticParams() {
   const client = createApolloClient();
 
@@ -86,7 +84,6 @@ export async function generateStaticParams() {
   const { data } = await client.query({ query: GET_ALL_SLUGS });
 
   if (!data?.entries || data.entries.length === 0) {
-    // Fallback to home page if no entries found
     return [{ slug: ['home'] }];
   }
 
@@ -95,12 +92,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// This tells Next.js to generate only the routes returned above.
-export const dynamicParams = false;
-
-export default async function Page({ params }: PageProps) {
-  const resolvedParams = await params;
-  const slugArray = resolvedParams.slug ?? ['home'];
+export default async function Page({ params }: { params: Promise<{ slug?: string[] }> }) {
+  const slugArray = (await params).slug ?? ['home']; // Await the Promise here
   const client = createApolloClient();
 
   const { data } = await client.query<GetPageBySlugResponse>({
@@ -123,29 +116,13 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <main>
-        {blocks.map((block: PageBuilderBlock, index: number) => {
+        {blocks.map((block, index) => {
           switch (block.__typename) {
             case 'hero_Entry':
               return (
-                <Hero
-                  key={index}
-                  heading={block.heroheading || ''}
-                  headingTwo={block.heroHeadingTwo || ''}
-                  heroDesc={block.heroDesc || ''}
-                  image={
-                    block.heroimage?.[0]
-                      ? {
-                          url: block.heroimage[0].url,
-                          filename: block.heroimage[0].filename,
-                          alt: block.heroimage[0].alt ?? '',
-                          width: block.heroimage[0].width,
-                          height: block.heroimage[0].height,
-                        }
-                      : null
-                  }
-                />
+                <Hero key={index} heading={block.heroheading || ''} headingTwo={block.heroHeadingTwo || ''} heroDesc={block.heroDesc || ''} image={block.heroimage?.[0] ?? null} />
               );
             case 'columns_Entry':
               return (
@@ -153,17 +130,7 @@ export default async function Page({ params }: PageProps) {
                   key={index}
                   title={block.columnsTitle || ''}
                   editor={block.columnsEditor || ''}
-                  image={
-                    block.columnsImage?.[0]
-                      ? {
-                          url: block.columnsImage[0].url,
-                          filename: block.columnsImage[0].filename,
-                          alt: block.columnsImage[0].alt ?? '',
-                          width: block.columnsImage[0].width,
-                          height: block.columnsImage[0].height,
-                        }
-                      : null
-                  }
+                  image={block.columnsImage?.[0] ?? null}
                   hireemail={settings.hireMeEmail || ''}
                   linkedin={settings.linkedinUrl?.url || ''}
                 />
@@ -173,7 +140,7 @@ export default async function Page({ params }: PageProps) {
           }
         })}
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
