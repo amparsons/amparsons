@@ -71,6 +71,30 @@ const GET_SETTINGS = gql`
   }
 `;
 
+// New function to statically generate all paths at build time
+export async function generateStaticParams() {
+  const client = createApolloClient();
+
+  const GET_ALL_SLUGS = gql`
+    query GetAllPageSlugs {
+      entries(section: "Pages") {
+        slug
+      }
+    }
+  `;
+
+  const { data } = await client.query({ query: GET_ALL_SLUGS });
+
+  if (!data?.entries || data.entries.length === 0) {
+    // Fallback to home page if no entries found
+    return [{ slug: ['home'] }];
+  }
+
+  return data.entries.map((entry: { slug: string }) => ({
+    slug: entry.slug ? [entry.slug] : ['home'],
+  }));
+}
+
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const slugArray = resolvedParams.slug ?? ['home'];
@@ -98,14 +122,15 @@ export default async function Page({ params }: PageProps) {
     <>
       <Header></Header>
       <main>
-        
-          {blocks.map((block: PageBuilderBlock, index: number) => {
-              switch (block.__typename) {
-              case 'hero_Entry':
-                  return <Hero key={index} 
-                  heading={block.heroheading || ''} 
-                  headingTwo={block.heroHeadingTwo || ''} 
-                  heroDesc={block.heroDesc || ''} 
+        {blocks.map((block: PageBuilderBlock, index: number) => {
+          switch (block.__typename) {
+            case 'hero_Entry':
+              return (
+                <Hero
+                  key={index}
+                  heading={block.heroheading || ''}
+                  headingTwo={block.heroHeadingTwo || ''}
+                  heroDesc={block.heroDesc || ''}
                   image={
                     block.heroimage?.[0]
                       ? {
@@ -117,32 +142,33 @@ export default async function Page({ params }: PageProps) {
                         }
                       : null
                   }
-                />;
-              case 'columns_Entry':
-                  return (
-                  <Columns
-                      key={index}
-                      title={block.columnsTitle || ''}
-                      editor={block.columnsEditor || ''}
-                      image={
-                        block.columnsImage?.[0]
-                          ? {
-                              url: block.columnsImage[0].url,
-                              filename: block.columnsImage[0].filename,
-                              alt: block.columnsImage[0].alt ?? '',
-                              width: block.columnsImage[0].width,
-                              height: block.columnsImage[0].height,
-                            }
-                          : null
-                      }
-                      hireemail={settings.hireMeEmail || ''}
-                      linkedin={settings.linkedinUrl?.url || ''}
-                  />
-                  );
-              default:
-                  return null;
-              }
-          })}
+                />
+              );
+            case 'columns_Entry':
+              return (
+                <Columns
+                  key={index}
+                  title={block.columnsTitle || ''}
+                  editor={block.columnsEditor || ''}
+                  image={
+                    block.columnsImage?.[0]
+                      ? {
+                          url: block.columnsImage[0].url,
+                          filename: block.columnsImage[0].filename,
+                          alt: block.columnsImage[0].alt ?? '',
+                          width: block.columnsImage[0].width,
+                          height: block.columnsImage[0].height,
+                        }
+                      : null
+                  }
+                  hireemail={settings.hireMeEmail || ''}
+                  linkedin={settings.linkedinUrl?.url || ''}
+                />
+              );
+            default:
+              return null;
+          }
+        })}
       </main>
       <Footer></Footer>
     </>
