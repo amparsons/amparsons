@@ -10,7 +10,7 @@ import '../styles/global-variables.scss';
 import '../styles/styles.scss';
 
 interface PageProps {
-  params: { slug: string }; // Changed to a string since we are using [slug] (single-segment)
+  params: Promise<{ slug?: string[] }>;
 }
 
 const PAGE_QUERY = gql`
@@ -59,6 +59,7 @@ const GET_SETTINGS = gql`
     siteSettingsEntries {
       ... on settings_Entry {
         hireMeEmail
+        hireMeEmail
         githubUrl {
           url
         }
@@ -82,37 +83,29 @@ export async function generateStaticParams() {
     }
   `;
 
-  try {
-    const response = await client.query({ query: GET_ALL_SLUGS });
-    const entries = response.data?.entries;
+  const { data } = await client.query({ query: GET_ALL_SLUGS });
 
-    console.log('✅ Slugs fetched from Craft CMS:', entries);
-
-    if (!entries || entries.length === 0) {
-      console.warn('⚠️ No entries found in Craft CMS during build.');
-      return [{ slug: 'home' }]; // Return a single string for "home"
-    }
-
-    // Return slugs as a simple string, not an array
-    return entries.map((entry: { slug: string }) => ({
-      slug: entry.slug || 'home', // Default to 'home' if no slug
-    }));
-  } catch (error) {
-    console.error('❌ Error fetching slugs from Craft CMS:', error);
-    return [{ slug: 'home' }]; // Fallback to 'home' if error occurs
+  if (!data?.entries || data.entries.length === 0) {
+    // Fallback to home page if no entries found
+    return [{ slug: ['home'] }];
   }
+
+  return data.entries.map((entry: { slug: string }) => ({
+    slug: entry.slug ? [entry.slug] : ['home'],
+  }));
 }
 
 // This tells Next.js to generate only the routes returned above.
 export const dynamicParams = false;
 
 export default async function Page({ params }: PageProps) {
-  const { slug } = params; // Destructure slug from params (since it's now a string)
+  const resolvedParams = await params;
+  const slugArray = resolvedParams.slug ?? ['home'];
   const client = createApolloClient();
 
   const { data } = await client.query<GetPageBySlugResponse>({
     query: PAGE_QUERY,
-    variables: { slug: slug }, // Pass slug as an array
+    variables: { slug: slugArray },
   });
 
   const entry = data.entries?.[0];
@@ -126,7 +119,7 @@ export default async function Page({ params }: PageProps) {
   const { data: settingsData } = await client.query<GetSettingsPageResponse>({
     query: GET_SETTINGS,
   });
-  const settings = settingsData.siteSettingsEntries?.[0] || {};
+  const settings = settingsData.siteSettingsEntries?.[0];
 
   return (
     <>
