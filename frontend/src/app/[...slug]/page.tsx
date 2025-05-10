@@ -98,6 +98,9 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ slug?: string[] }> }) {
   const slugArray = (await params).slug ?? ['home']; // Await the Promise here
+
+  console.log('Page slug:', slugArray);  // Log the slug value
+
   const client = createApolloClient();
 
   const { data } = await client.query<GetPageBySlugResponse>({
