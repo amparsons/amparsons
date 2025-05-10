@@ -1,22 +1,9 @@
-import Header from './components/header/header';
-import Title from './components/title/title';
-import Card from './components/card/card';
-import Promo from './components/promo/promo';
-import Footer from './components/footer/footer';
-import './styles/global-variables.scss';
-import './styles/styles.scss';
-
+// app/page.tsx
 export default function Home() {
   return (
     <div>
-      <Header></Header>
-        <main>
-          <Title></Title>
-          <Card></Card>
-          <Card isFlipped={true}></Card>
-          <Promo></Promo>
-        </main>
-      <Footer></Footer>
+      <h1>Welcome to My Home Page!</h1>
+      <p>This is a test to ensure the home page renders correctly.</p>
     </div>
   );
 }
